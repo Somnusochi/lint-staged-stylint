@@ -1,0 +1,67 @@
+@import (reference) '../style/common.less';
+
+.mixin {
+  z-index: 100;
+}
+
+.model__loading {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  .mixin();
+}
+
+.mask_transparent {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.content__area {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  z-index: 5001;
+}
+
+.text__area {
+  display: inline-block;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  padding: 40px 70px;
+  height: 116px;
+  box-sizing: border-box;
+}
+
+.text-desc {
+  position: relative;
+
+  .weui-icon_toast {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    margin: 0;
+  }
+
+  p {
+    height: 36px;
+    font-size: 28px;
+    text-align: center;
+    color: @g-white;
+    line-height: 36px;
+    margin-left: 56px;
+  }
+}

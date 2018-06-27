@@ -1,0 +1,52 @@
+{
+    "extends": ["stylelint-config-standard"],
+    "plugins": [
+        "stylelint-order"
+    ],
+    "rules": {
+        "at-rule-no-unknown": [ true, {
+            "ignoreAtRules": [
+                "extends",
+                "include",
+                "mixin"
+            ]
+        }],
+        "order/order": [
+            "custom-properties",
+            "dollar-variables",
+            "at-variables",
+            {
+                "type": "at-rule",
+                "name": "mixin",
+                "hasBlock": true
+            },
+            {
+                "type": "at-rule",
+                "name": "include"
+            },
+            {
+                "type": "at-rule",
+                "name": "include",
+                "hasBlock": true
+            },
+            "at-rules",
+            "declarations",
+            "rules",
+            "less-mixins"
+        ],
+        "order/properties-order": [
+            "display",
+            "color",
+            "background",
+            {
+                "order": "flexible",
+                "properties": [
+                    "margin-top",
+                    "line-height",
+                    "border-radius"
+                ]
+            },
+            "transition"
+        ]
+    }
+}
