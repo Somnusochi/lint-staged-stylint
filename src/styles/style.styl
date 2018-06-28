@@ -1,191 +1,72 @@
-body {
-  background: #f0f0f0;
-  min-width: 1000px;
+$g-font-light-color= #999;
+$g-font-default-color= #888;
+$g-font-grey-color= #666;
+$g-font-dark-color= #333;
+$g-font-placeholder-color= #b2b2b2;
+$g-font-orange-color= #f5a623;
+$g-font-linghtgrey-color= #5a5a5a;
+
+// main-color
+$g-main-orange= #ffbd2e;
+$g-main-green= #6eb92b;
+$g-main-red= #e64340;
+$g-main-cyan= #0dd9a6;
+
+$g-white= #fff;
+$g-black= #000;
+
+// border-color
+$g-border-color= #e5e5e5;
+$g-border-red= #f43530;
+// bg-color
+$g-body-bg= #f2f2f6;
+$g-border-default= #ccc;
+$g-body-grey= #606668;
+
+fix-font-size($fontSize) {
+  @media screen and (max-device-width: 320px) {
+    font-size: $fontSize!important;
+  }
 }
-
-.container {
-  margin: 0 auto;
-  width: 1000px;
+.ipt__group {
+  margin-top: 40px;
+  background-color: $g-white;
+  .weui-btn_primary {
+    width: auto;
+    height: 100%;
+    background-color: transparent;
+    font-size: 32px; /*px*/
+    fix-font-size(32px);
+    color: $g-main-green;
+    &::after {
+      border: 0;
+    }
+  }
+  .code__btn {
+    box-sizing: content-box;
+    padding: 0 0 0 36px;
+    width: 195px;
+    height: 90px;
+    fix-font-size(32px);
+    &:before {
+      position: absolute;
+      top: 2px;
+      left: 10px;
+      width: 1px; /*no*/
+      height: 88px;
+      background-color: $g-border-color;
+      content: '';
+    }
+    &:active {
+      background-color: transparent;
+      color: rgba($g-main-green, .6);
+    }
+  }
 }
-
-/* 头部 */
-.header {
-  background: #fff;
-  line-height: 96px;
-  overflow: hidden;
+.btn__group {
+  margin: 60px auto;
+  width: 670px;
 }
-
-.header .logo {
-  background: url(../../img/logo.png) no-repeat 0 0;
-  height: 70px;
-  margin: 13px 0;
-  text-indent: -99cm;
-  width: 315px;
-}
-
-.banner a {
-  display: block;
-  color: #fff;
-  background: #e99425;
-  margin-top: 16px;
-  line-height: 71px;
-  border-radius: 8px;
-  -moz-transition: background-color 0.3s;
-  -webkit-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-  font-size: 20px;
-  width: 251px;
-}
-
-.header a:hover {
-  color: #6eb92b;
-}
-
-
-/* 头图 */
-.banner {
-  background: #7cb42d;
-  height: 659px;
-}
-
-.banner .container {
-  position: relative;
-}
-
-.banner img {
-  height: 659px;
-  width: 1000px;
-}
-
-.banner .downA {
-  bottom: 60px;
-  position: absolute;
-  right: 0;
-}
-
-.banner a:hover {
-  background: #589800;
-  text-decoration: none;
-}
-
-.banner p {
-  color: #f6ff00;
-  font-size: 16px;
-  margin-top: 10px;
-  opacity: 0;
-  text-align: center;
-  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  visibility: hidden;
-}
-
-.banner a:hover + p {
-  opacity: 1;
-  visibility: visible;
-}
-
-.banner .iconfont {
-  font-size: 40px;
-  margin: 0 20px;
-  vertical-align: middle;
-}
-
-/* 主体 */
-.main > div {
-  border-top: 1px dashed #6eb92b;
-  overflow: hidden;
-  padding: 85px 10px;
-}
-
-.main > div:first-child {
-  border-top: none;
-}
-
-.main > div dl {
-  margin: 166px 0;
-}
-
-.main > div dt {
-  color: #000;
-  font-size: 36px;
-  font-weight: bold;
-}
-
-.main > div dd {
-  color: #666;
-  font-size: 24px;
-}
-
-/* 右侧悬浮 */
-
-#centerbox {
-  position: fixed;
-  right: 20px;
-}
-
-.w980 #centerbox {
-  right: 5px;
-}
-
-#rNav {
-  bottom: 30px;
-  display: none;
-  font-weight: bold;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  width: 150px;
-}
-
-#rNav div {
-  background: url(../../css/bg/appCode.png) no-repeat center;
-  height: 150px;
-  width: 150px;
-}
-
-#rNav p,
-#rNav span {
-  color: #6eb92b;
-}
-
-#rNav a {
-  display: block;
-  color: #fff;
-  background: #ea9b33;
-  margin-top: 14px;
-  line-height: 36px;
-  border-radius: 5px;
-  -o-transition: background-color 0.3s;
-  -moz-transition: background-color 0.3s;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-}
-
-#rNav a:hover {
-  background: #7bb42c;
-  text-decoration: none;
-}
-
-#rNav span {
-  font-weight: normal;
-  line-height: 40px;
-  opacity: 0;
-  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  visibility: hidden;
-}
-
-#rNav a:hover + span {
-  opacity: 1;
-  visibility: visible;
-  width: 100%;
-}
-
-#link {
-  margin-top: 0;
+.grey.grey {
+  color: $g-font-placeholder-color;
 }

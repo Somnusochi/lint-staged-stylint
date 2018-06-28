@@ -52,7 +52,8 @@
   },
   "lint-staged": {
     "src/**/*.styl": [
-      "stylint"
+      "stylint",
+      "git add"
     ],
     "src/**/*.{css,less,scss}": [
       "prettier --write",
