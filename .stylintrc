@@ -30,7 +30,7 @@
   "customProperties": {
     "expect": [],
     "error": true
-    },
+  },
   "depthLimit": {
     "expect": false,
     "error": true
@@ -137,5 +137,9 @@
   "zIndexNormalize": {
     "expect": false,
     "error": true
-  }
+  },
+  "insertNewLineAroundImports": false,
+  "insertNewLineAroundBlocks": false,
+  "insertNewLineAroundProperties": false,
+  "insertNewLineAroundOthers": false
 }
