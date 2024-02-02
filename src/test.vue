@@ -11,6 +11,9 @@ export default {
   name: 'school_resources',
   data() {
     return {
+
+
+      
       dialogInfo: {
         type: '',
         content: [],
